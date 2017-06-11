@@ -17,8 +17,9 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "tr",
       "styles": [
+        "../node_modules/bootswatch/flatly/bootstrap.min.css",
         "styles.css"
       ],
       "scripts": [],
