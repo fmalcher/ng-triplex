@@ -15,8 +15,12 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  lookupUrl(url: string) {
-    this.searchSubmit.emit(url);
+  clearForm() {
+    this.formValue = '';
+  }
+
+  lookupUrl() {
+    this.searchSubmit.emit(this.formValue);
   }
 
 }
