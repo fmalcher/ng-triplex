@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'tr-search',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  @Input() formValue: string;
+  @Output() searchSubmit = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  lookupUrl(url: string) {
+    this.searchSubmit.emit(url);
   }
 
 }
