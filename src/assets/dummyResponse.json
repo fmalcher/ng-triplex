@@ -1,0 +1,44 @@
+{
+   "tripleSets": [
+      {
+         "subject": "Leipzig",
+         "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+         "object": [
+            {
+               "name": "City108524735"
+            },
+            {
+               "name": "City"
+            },
+            {
+               "name": "Foobar"
+            }
+         ]
+      },
+      {
+         "subject": "Ferdinand",
+         "predicate": "besitzt",
+         "object": [
+            {
+               "name": "MacBook",
+               "uri": "https://www.apple.com/de/macbook/"
+            },
+            {
+               "name": "Kamera"
+            }
+         ]
+      },
+      {
+         "subject": "Robert",
+         "predicate": "programmiert",
+         "object": [
+            {
+               "name": "Backend",
+               "uri": "https://de.wikipedia.org/wiki/Front-End_und_Back-End"
+            }
+         ]
+      }
+   ],
+   "uri": "http://example.com",
+   "resourceFormat": "microdata"
+}
