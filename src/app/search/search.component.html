@@ -2,17 +2,17 @@
   <div class="col-md-6 col-md-offset-3" style="text-align: center">
     <h2>Provide URL</h2>
     <form (ngSubmit)="lookupUrl()">
-    <div class="form-group">
-      <div class="input-group">
-        <input type="text" class="form-control input-lg" placeholder="http://" [(ngModel)]="formValue" name="url">
-        <span class="input-group-btn">
-          <button class="btn btn-default btn-lg" type="button" (click)="clearForm()">
+      <div class="form-group">
+        <div class="input-group">
+          <input type="text" class="form-control input-lg" placeholder="http://" [(ngModel)]="formValue" name="url">
+          <span class="input-group-btn">
+          <button class="btn btn-default btn-lg" type="button" (click)="clearForm()" [disabled]="!formValue">
             <span class="glyphicon glyphicon-remove"></span>
           </button>
-        </span>
+          </span>
+        </div>
       </div>
-    </div>
-    <button type="submit" class="btn btn-lg btn-success btn-block">Extract triples</button>
+      <button type="submit" class="btn btn-lg btn-success btn-block">Extract triples</button>
     </form>
   </div>
 </div>
