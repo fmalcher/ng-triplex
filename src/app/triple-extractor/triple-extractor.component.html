@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-  <tr-search (searchSubmit)="lookupUrl($event)" [formValue]="searchFormValue"></tr-search>
+  <tr-search [formValue]="searchFormValue"></tr-search>
 
   <tr-results [results]="tripleResponse$ | async"></tr-results>
 

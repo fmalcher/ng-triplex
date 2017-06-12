@@ -7,7 +7,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/switchMap';
 
 import { TripleService } from '../shared/triple.service';
-import { QueryResponse } from './../shared/models/query-response';
+import { QueryResponse } from '../shared/models/query-response';
 
 @Component({
   selector: 'tr-triple-extractor',
@@ -19,7 +19,7 @@ export class TripleExtractorComponent implements OnInit {
   tripleResponse$: Observable<QueryResponse>;
   searchFormValue: string;
 
-  constructor(private ts: TripleService, private route: ActivatedRoute, private router: Router) {}
+  constructor(private ts: TripleService, private route: ActivatedRoute) {}
 
   ngOnInit() {
 
@@ -28,10 +28,6 @@ export class TripleExtractorComponent implements OnInit {
       .filter(e => !!e)
       .do(url => this.searchFormValue = url as string)
       .switchMap(url => this.ts.getTriplesForURI(url as string));
-  }
-
-  lookupUrl(url: String) {
-    this.router.navigate(['/'], { queryParams: { url: url } });
   }
 
 }

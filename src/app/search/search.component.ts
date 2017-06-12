@@ -1,26 +1,24 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
+
+import { TripleService } from '../shared/triple.service';
 
 @Component({
   selector: 'tr-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
 
   @Input() formValue: string;
-  @Output() searchSubmit = new EventEmitter<string>();
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(private ts: TripleService) { }
 
   clearForm() {
     this.formValue = '';
   }
 
   lookupUrl() {
-    this.searchSubmit.emit(this.formValue);
+    this.ts.lookupUrl(this.formValue);
   }
 
 }

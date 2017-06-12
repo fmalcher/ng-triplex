@@ -10,6 +10,7 @@ import { ResultsComponent } from './results/results.component';
 import { TripleSetComponent } from './triple-set/triple-set.component';
 import { SearchComponent } from './search/search.component';
 import { TripleExtractorComponent } from './triple-extractor/triple-extractor.component';
+import { TripleObjectBoxComponent } from './triple-object-box/triple-object-box.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TripleExtractorComponent } from './triple-extractor/triple-extractor.co
     ResultsComponent,
     TripleSetComponent,
     SearchComponent,
-    TripleExtractorComponent
+    TripleExtractorComponent,
+    TripleObjectBoxComponent
   ],
   imports: [
     BrowserModule,
