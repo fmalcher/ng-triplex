@@ -2,18 +2,18 @@
   <div class="col-md-4">
     <div class="panel panel-warning">
       <div class="panel-body">
-        {{ tripleSet.subject }}
+        {{ triple.subject }}
       </div>
     </div>
   </div>
   <div class="col-md-4">
     <div class="panel panel-primary">
       <div class="panel-body">
-        {{ tripleSet.predicate }}
+        {{ triple.predicate }}
       </div>
     </div>
   </div>
   <div class="col-md-4">
-    <tr-triple-object-box [object]="tripleSet.object"></tr-triple-object-box>
+    <tr-triple-object-box [object]="triple.object"></tr-triple-object-box>
   </div>
 </div>

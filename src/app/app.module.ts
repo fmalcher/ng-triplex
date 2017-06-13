@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ResultsComponent } from './results/results.component';
-import { TripleSetComponent } from './triple-set/triple-set.component';
+import { TripleComponent } from './triple/triple.component';
 import { SearchComponent } from './search/search.component';
 import { TripleExtractorComponent } from './triple-extractor/triple-extractor.component';
 import { TripleObjectBoxComponent } from './triple-object-box/triple-object-box.component';
@@ -16,7 +16,7 @@ import { TripleObjectBoxComponent } from './triple-object-box/triple-object-box.
   declarations: [
     AppComponent,
     ResultsComponent,
-    TripleSetComponent,
+    TripleComponent,
     SearchComponent,
     TripleExtractorComponent,
     TripleObjectBoxComponent

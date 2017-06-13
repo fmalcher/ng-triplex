@@ -1,8 +1,8 @@
 import { TripleObject } from './triple-object';
 export { TripleObject } from './triple-object';
 
-export interface TripleSet {
+export interface Triple {
     subject: string;
     predicate: string;
-    object: TripleObject[];
+    object: TripleObject;
 }
