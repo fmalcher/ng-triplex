@@ -14,12 +14,6 @@
     </div>
   </div>
   <div class="col-md-4">
-    <tr-triple-object-box [object]="tripleSet.object[0]"></tr-triple-object-box>
-  </div>
-</div>
-
-<div class="row" *ngFor="let obj of tripleSet.object | slice:1">
-  <div class="col-md-4 col-md-offset-8">
-    <tr-triple-object-box [object]="obj"></tr-triple-object-box>
+    <tr-triple-object-box [object]="tripleSet.object"></tr-triple-object-box>
   </div>
 </div>
