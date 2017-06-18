@@ -1,4 +1,4 @@
-export interface TripleObject {
+export interface TriplePart {
     name: string;
     uri?: string;
 }

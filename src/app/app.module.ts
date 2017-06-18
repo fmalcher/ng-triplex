@@ -10,7 +10,7 @@ import { ResultsComponent } from './results/results.component';
 import { TripleComponent } from './triple/triple.component';
 import { SearchComponent } from './search/search.component';
 import { TripleExtractorComponent } from './triple-extractor/triple-extractor.component';
-import { TripleObjectBoxComponent } from './triple-object-box/triple-object-box.component';
+import { TriplePartBoxComponent } from './triple-part-box/triple-part-box.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { TripleObjectBoxComponent } from './triple-object-box/triple-object-box.
     TripleComponent,
     SearchComponent,
     TripleExtractorComponent,
-    TripleObjectBoxComponent
+    TriplePartBoxComponent
   ],
   imports: [
     BrowserModule,

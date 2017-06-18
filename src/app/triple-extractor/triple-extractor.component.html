@@ -1,7 +1,5 @@
 <div class="container-fluid">
-
   <tr-search [formValue]="searchFormValue"></tr-search>
 
-  <tr-results [results]="tripleResponse$ | async"></tr-results>
-
+  <tr-results *ngFor="let response of queryResponses$ | async" [response]="response"></tr-results>
 </div>

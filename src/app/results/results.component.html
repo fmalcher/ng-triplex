@@ -1,3 +1,4 @@
-<ng-container *ngIf="results?.triples">
-  <tr-triple *ngFor="let triple of results.triples" [triple]="triple"></tr-triple>
+<ng-container *ngIf="response?.triples?.length">
+  <h2>{{ response.resourceFormat }}</h2>
+  <tr-triple *ngFor="let triple of response.triples" [triple]="triple"></tr-triple>
 </ng-container>

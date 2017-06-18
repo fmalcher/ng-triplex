@@ -1,8 +1,8 @@
-import { TripleObject } from './triple-object';
-export { TripleObject } from './triple-object';
+import { TriplePart } from './triple-part';
+export { TriplePart } from './triple-part';
 
 export interface Triple {
-    subject: string;
-    predicate: string;
-    object: TripleObject;
+    subject: TriplePart;
+    predicate: TriplePart;
+    object: TriplePart;
 }

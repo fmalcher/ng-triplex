@@ -11,7 +11,7 @@ export class TripleService {
 
   constructor(private http: Http, private router: Router, @Inject('API_URL') private apiUrl) { }
 
-  getTriplesForURI(uri: string): Observable<QueryResponse> {
+  getTriplesForURI(uri: string): Observable<QueryResponse[]> {
     return this.http.post(this.apiUrl + '/query', uri)
       .map(res => res.json());
   }

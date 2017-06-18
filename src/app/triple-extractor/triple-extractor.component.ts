@@ -16,14 +16,13 @@ import { QueryResponse } from '../shared/models/query-response';
 })
 export class TripleExtractorComponent implements OnInit {
 
-  tripleResponse$: Observable<QueryResponse>;
+  queryResponses$: Observable<QueryResponse[]>;
   searchFormValue: string;
 
   constructor(private ts: TripleService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-
-    this.tripleResponse$ = this.route.queryParams
+    this.queryResponses$ = this.route.queryParams
       .pluck('url')
       .filter(e => !!e)
       .do(url => this.searchFormValue = url as string)

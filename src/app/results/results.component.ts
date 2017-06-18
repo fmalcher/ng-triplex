@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
-  @Input() results: QueryResponse;
+  @Input() response: QueryResponse;
 
   constructor() { }
 
