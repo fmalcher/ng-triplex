@@ -1,5 +1,8 @@
 <div class="container-fluid">
-  <tr-search [formValue]="searchFormValue"></tr-search>
+  <tr-search [formValue]="searchFormValue" placeholder="http://" (submitted)="lookupUrl($event)">
+    <h2>Provide URL to extract triples from</h2>
+    <span buttonText>Extract triples</span>
+  </tr-search>
 
   <tr-loading-indicator *ngIf="loading">Extracting triples</tr-loading-indicator>
 

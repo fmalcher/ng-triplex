@@ -1,7 +1,5 @@
 import { Component, EventEmitter, Output, Input } from '@angular/core';
 
-import { TripleService } from '../shared/triple.service';
-
 @Component({
   selector: 'tr-search',
   templateUrl: './search.component.html',
@@ -10,15 +8,17 @@ import { TripleService } from '../shared/triple.service';
 export class SearchComponent {
 
   @Input() formValue: string;
+  @Input() placeholder = '';
+  @Output() submitted = new EventEmitter<string>();
 
-  constructor(private ts: TripleService) { }
+  constructor() { }
 
   clearForm() {
     this.formValue = '';
   }
 
-  lookupUrl() {
-    this.ts.lookupUrl(this.formValue);
+  submitForm() {
+    this.submitted.emit(this.formValue);
   }
 
 }

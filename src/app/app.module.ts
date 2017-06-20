@@ -12,6 +12,7 @@ import { SearchComponent } from './search/search.component';
 import { TripleExtractorComponent } from './triple-extractor/triple-extractor.component';
 import { TriplePartBoxComponent } from './triple-part-box/triple-part-box.component';
 import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator.component';
+import { DBPediaSearchComponent } from './dbpedia-search/dbpedia-search.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator
     SearchComponent,
     TripleExtractorComponent,
     TriplePartBoxComponent,
-    LoadingIndicatorComponent
+    LoadingIndicatorComponent,
+    DBPediaSearchComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,7 @@ export class TripleExtractorComponent implements OnInit {
 
   queryResponses$: Observable<QueryResponse[]>;
   searchFormValue: string;
-  loading: boolean = false;
+  loading = false;
 
   constructor(private ts: TripleService, private route: ActivatedRoute) {}
 
@@ -30,6 +30,10 @@ export class TripleExtractorComponent implements OnInit {
       .do(() => this.loading = true)
       .switchMap(url => this.ts.getTriplesForURI(url as string))
       .do(() => this.loading = false);
+  }
+
+  lookupUrl(url: string) {
+    this.ts.lookupUrl(url);
   }
 
 }
