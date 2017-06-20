@@ -20,6 +20,7 @@
       "prefix": "tr",
       "styles": [
         "../node_modules/bootswatch/flatly/bootstrap.min.css",
+        "../node_modules/font-awesome/scss/font-awesome.scss",
         "styles.css"
       ],
       "scripts": [],
