@@ -1,0 +1,4 @@
+<h2>{{ row.title }}</h2>
+{{ row.snippet | stripTags }}
+
+<button type="button" class="btn btn-primary" (click)="lookupDBpedia(row.title)">Lookup resource</button>

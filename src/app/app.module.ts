@@ -2,7 +2,8 @@ import { TripleService } from './shared/triple.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
+import { StripTagsPipe } from 'angular-pipes/src/string/strip-tags.pipe';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +14,7 @@ import { TripleExtractorComponent } from './triple-extractor/triple-extractor.co
 import { TriplePartBoxComponent } from './triple-part-box/triple-part-box.component';
 import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator.component';
 import { DBPediaSearchComponent } from './dbpedia-search/dbpedia-search.component';
+import { DbpediaResultComponent } from './dbpedia-result/dbpedia-result.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,15 @@ import { DBPediaSearchComponent } from './dbpedia-search/dbpedia-search.componen
     TripleExtractorComponent,
     TriplePartBoxComponent,
     LoadingIndicatorComponent,
-    DBPediaSearchComponent
+    DBPediaSearchComponent,
+    DbpediaResultComponent,
+    StripTagsPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    JsonpModule,
     AppRoutingModule
   ],
   providers: [TripleService],

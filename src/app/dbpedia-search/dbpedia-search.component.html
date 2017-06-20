@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <tr-search [formValue]="searchFormValue" placeholder="Wikipedia Search Term" (submitted)="wikiSearch($event)">
+    <h2>Search on Wikipedia</h2>
+    <span buttonText>Search</span>
+  </tr-search>
+
+  <tr-loading-indicator *ngIf="loading">Extracting triples</tr-loading-indicator>
+
+  <tr-dbpedia-result *ngFor="let result of wikiResults$ | async" [row]="result" [hidden]="loading"></tr-dbpedia-result>
+ <!-- <tr-results *ngFor="let response of queryResponses$ | async" [response]="response" ></tr-results>-->
+</div>
