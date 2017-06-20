@@ -1,5 +1,7 @@
 <div class="container-fluid">
   <tr-search [formValue]="searchFormValue"></tr-search>
 
-  <tr-results *ngFor="let response of queryResponses$ | async" [response]="response"></tr-results>
+  <tr-loading-indicator *ngIf="loading">Extracting triples</tr-loading-indicator>
+
+  <tr-results *ngFor="let response of queryResponses$ | async" [response]="response" [hidden]="loading"></tr-results>
 </div>

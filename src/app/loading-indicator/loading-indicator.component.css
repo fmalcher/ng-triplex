@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  text-align: center;
+}
+
+p {
+  font-weight: bold;
+  font-size: 14pt;
+  margin-top: 10px;
+}

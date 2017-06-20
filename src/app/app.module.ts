@@ -11,6 +11,7 @@ import { TripleComponent } from './triple/triple.component';
 import { SearchComponent } from './search/search.component';
 import { TripleExtractorComponent } from './triple-extractor/triple-extractor.component';
 import { TriplePartBoxComponent } from './triple-part-box/triple-part-box.component';
+import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TriplePartBoxComponent } from './triple-part-box/triple-part-box.compon
     TripleComponent,
     SearchComponent,
     TripleExtractorComponent,
-    TriplePartBoxComponent
+    TriplePartBoxComponent,
+    LoadingIndicatorComponent
   ],
   imports: [
     BrowserModule,
