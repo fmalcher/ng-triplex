@@ -15,6 +15,7 @@ import { TriplePartBoxComponent } from './triple-part-box/triple-part-box.compon
 import { LoadingIndicatorComponent } from './loading-indicator/loading-indicator.component';
 import { DBPediaSearchComponent } from './dbpedia-search/dbpedia-search.component';
 import { DbpediaResultComponent } from './dbpedia-result/dbpedia-result.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DbpediaResultComponent } from './dbpedia-result/dbpedia-result.componen
     LoadingIndicatorComponent,
     DBPediaSearchComponent,
     DbpediaResultComponent,
-    StripTagsPipe
+    StripTagsPipe,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
