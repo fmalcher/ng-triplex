@@ -1,4 +1,4 @@
-export interface TriplePart {
+export class TriplePart {
     name: string;
     uri?: string;
 }

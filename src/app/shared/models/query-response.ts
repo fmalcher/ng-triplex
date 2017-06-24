@@ -1,6 +1,6 @@
 import { Triple } from './triple';
 
-export interface QueryResponse {
+export class QueryResponse {
     triples: Triple[];
     resourceFormat: string;
 }
