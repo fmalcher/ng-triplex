@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { StripTagsPipe } from 'angular-pipes/src/string/strip-tags.pipe';
+import { SimpleNotificationsModule } from 'angular2-notifications';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -36,7 +37,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     HttpModule,
     JsonpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SimpleNotificationsModule.forRoot()
   ],
   providers: [TripleService],
   bootstrap: [AppComponent]

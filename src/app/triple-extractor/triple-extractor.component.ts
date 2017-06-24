@@ -5,6 +5,7 @@ import 'rxjs/add/operator/pluck';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/switchMap';
+import { NotificationsService } from 'angular2-notifications';
 
 import { TripleService } from '../shared/triple.service';
 import { QueryResponse } from '../shared/models/query-response';
@@ -20,7 +21,10 @@ export class TripleExtractorComponent implements OnInit {
   searchFormValue: string;
   loading = false;
 
-  constructor(private ts: TripleService, private route: ActivatedRoute) {}
+  constructor(
+    private ts: TripleService,
+    private route: ActivatedRoute,
+    private ns: NotificationsService) {}
 
   ngOnInit() {
     this.queryResponses$ = this.route.queryParams
