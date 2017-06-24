@@ -5,7 +5,8 @@ import { TripleExtractorComponent } from './triple-extractor/triple-extractor.co
 import { DBPediaSearchComponent } from './dbpedia-search/dbpedia-search.component';
 
 const routes: Routes = [
-  { path: '', component: TripleExtractorComponent },
+  { path: '', redirectTo: 'query', pathMatch: 'full' },
+  { path: 'query', component: TripleExtractorComponent },
   { path: 'dbpedia', component: DBPediaSearchComponent }
 ];
 
