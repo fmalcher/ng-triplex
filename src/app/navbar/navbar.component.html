@@ -2,8 +2,14 @@
   <div class="row navbar-row">
     <div class="col-md-4 col-md-offset-4">
       <div class="btn-group btn-group-justified navbar-group">
-        <a routerLink="/query" type="button" class="btn btn-default" [routerLinkActive]="activeClass">URL</a>
-        <a routerLink="/dbpedia" type="button" class="btn btn-default" [routerLinkActive]="activeClass">DBpedia</a>
+        <a routerLink="/query" type="button" class="btn btn-default btn-sm" [routerLinkActive]="activeClass">
+          <i class="fa fa-globe" aria-hidden="true"></i>
+          URL
+        </a>
+        <a routerLink="/dbpedia" type="button" class="btn btn-default btn-sm" [routerLinkActive]="activeClass">
+          <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+          Wikipedia / DBpedia
+        </a>
       </div>
     </div>
   </div>
