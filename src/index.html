@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Triplex</title>
@@ -8,7 +9,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
-  <app-root>Loading...</app-root>
+  <app-root>
+    Loading...
+      <div itemtype="http://schema.org/WebApplication" itemid="http://triplex.work" itemscope>
+        <meta itemprop="name" content="Triplex" />
+        <meta itemprop="about" content="Triplex is an interactive, web based triple browser." />
+        <meta itemprop="http://dbpedia.org/property/supports" content="Microdata, RDFa, N-Triples" />
+        <meta itemprop="downloadUrl" content="https://github.com/triplex-browser" />
+        <meta itemprop="author" content="Ferdinand Malcher" />
+        <meta itemprop="author" content="Robert Weiße" />
+        <meta itemprop="datePublished" content="2017" />
+      </div>
+  </app-root>
 </body>
+
 </html>
