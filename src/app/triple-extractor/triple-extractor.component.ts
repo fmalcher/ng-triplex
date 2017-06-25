@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/pluck';
@@ -15,7 +15,7 @@ import { QueryResponse } from '../shared/models/query-response';
   templateUrl: './triple-extractor.component.html',
   styleUrls: ['./triple-extractor.component.css']
 })
-export class TripleExtractorComponent implements OnInit {
+export class TripleExtractorComponent implements AfterViewInit {
 
   queryResponses$: Observable<QueryResponse[]>;
   searchFormValue: string;
@@ -26,7 +26,7 @@ export class TripleExtractorComponent implements OnInit {
     private route: ActivatedRoute,
     private ns: NotificationsService) {}
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.queryResponses$ = this.route.queryParams
       .pluck('url')
       .filter(e => !!e)
