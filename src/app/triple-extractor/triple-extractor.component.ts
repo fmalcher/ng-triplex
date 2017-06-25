@@ -34,6 +34,10 @@ export class TripleExtractorComponent implements OnInit {
       .do(() => this.loading = true)
       .switchMap(url => this.ts.getTriplesForURI(url as string))
       .do(() => this.loading = false);
+
+    if (!this.route.snapshot.queryParams['url']) {
+      this.ts.lookupUrl('http://triplex.work');
+    }
   }
 
   lookupUrl(url: string) {
