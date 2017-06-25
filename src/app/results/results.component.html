@@ -1,4 +1,11 @@
 <ng-container *ngIf="response?.triples?.length">
-  <h2>{{ response.resourceFormat }}</h2>
+  <div class="panel panel-success">
+    <div class="panel-body">
+      <h4><strong>Resource format:</strong>
+    {{ response.resourceFormat }}
+    <span class="label label-success pull-right">{{ response.triples.length }} results</span></h4>
+    </div>
+
+  </div>
   <tr-triple *ngFor="let triple of response.triples" [triple]="triple"></tr-triple>
 </ng-container>
