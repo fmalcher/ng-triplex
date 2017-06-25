@@ -18,8 +18,12 @@ export class DbpediaResultComponent implements OnInit {
   }
 
   lookupDBpedia(title: string) {
-    title = title.split(' ').join('_');
+    title = this.underscorify(title);
     this.ts.lookupUrl('http://de.dbpedia.org/resource/' + title);
+  }
+
+  underscorify(str: string) {
+    return str.split(' ').join('_');
   }
 
 }

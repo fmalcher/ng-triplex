@@ -1,4 +1,29 @@
-<h2>{{ row.title }}</h2>
-{{ row.snippet | stripTags }}
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{ row.title }}</h3>
 
-<button type="button" class="btn btn-primary" (click)="lookupDBpedia(row.title)">Lookup resource</button>
+      </div>
+      <div class="panel-body">
+
+        <div class="row">
+          <div class="col-md-8">{{ row.snippet | stripTags }}…</div>
+          <div class="col-md-2">
+            <a type="button" class="btn btn-success btn-sm btn-block" (click)="lookupDBpedia(row.title)">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              Lookup
+            </a>
+          </div>
+          <div class="col-md-2">
+            <a type="button" class="btn btn-info btn-sm btn-block" target="_blank"
+            href="https://de.wikipedia.org/wiki/{{ underscorify(row.title) }}">
+              <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+              Wikipedia
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
