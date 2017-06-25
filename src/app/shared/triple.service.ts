@@ -1,11 +1,13 @@
-import { WikiResult } from './models/wiki-result';
 import { Injectable, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Http, Jsonp } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 import { QueryResponse } from './models/query-response';
+import { WikiResult } from './models/wiki-result';
 
 @Injectable()
 export class TripleService {
@@ -18,7 +20,8 @@ export class TripleService {
 
   getTriplesForURI(uri: string): Observable<QueryResponse[]> {
     return this.http.post(this.apiUrl + '/query', uri)
-      .map(res => res.json());
+      .map(res => res.json())
+      .catch(this.errorHandler);
   }
 
   getResultsFromWikipedia(searchTerm: string): Observable<WikiResult[]> {
@@ -30,16 +33,22 @@ export class TripleService {
           title: r.title,
           snippet: r.snippet
         };
-      }));
+      }))
+      .catch(this.errorHandler);
   }
 
 
   lookupUrl(url: string) {
-    this.router.navigate(['/'], { queryParams: { url: url } });
+    this.router.navigate(['/query'], { queryParams: { url: url } });
   }
 
   wikiSearch(searchTerm: string) {
-    this.router.navigate(['/', 'dbpedia'], { queryParams: { q: searchTerm } });
+    this.router.navigate(['/dbpedia'], { queryParams: { q: searchTerm } });
+  }
+
+
+  private errorHandler(error: Error | any): Observable<any> {
+    return Observable.throw(error);
   }
 
 }
