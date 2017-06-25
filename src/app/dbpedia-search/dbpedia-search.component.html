@@ -4,8 +4,7 @@
     <span buttonText>Search</span>
   </tr-search>
 
-  <tr-loading-indicator *ngIf="loading">Extracting triples</tr-loading-indicator>
+  <tr-loading-indicator *ngIf="loading">Searching Wikipedia</tr-loading-indicator>
 
   <tr-dbpedia-result *ngFor="let result of wikiResults$ | async" [row]="result" [hidden]="loading"></tr-dbpedia-result>
- <!-- <tr-results *ngFor="let response of queryResponses$ | async" [response]="response" ></tr-results>-->
 </div>
