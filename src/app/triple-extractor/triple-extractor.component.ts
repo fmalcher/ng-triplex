@@ -63,13 +63,12 @@ export class TripleExtractorComponent implements OnInit {
 
   errorHandler(err) {
     this.loading = false;
-    const alert = this.toastr.error;
 
     switch (err.status) {
-      case 400: return alert('Could not request the given URI.');
-      case 422: return alert('Could not parse resource.');
-      case 500: return alert('Could not parse body of resource correctly.');
-      default: return alert('Something went wrong...');
+      case 400: return this.toastr.error('Could not request the given URI.');
+      case 422: return this.toastr.error('Could not parse resource.');
+      case 500: return this.toastr.error('Could not parse body of resource correctly.');
+      default: return this.toastr.error('Something went wrong...');
     }
   }
 
