@@ -1,0 +1,8 @@
+div.result-header {
+  border: 1px solid #AAA;
+  background: #EEE;
+}
+
+div.result-header .panel-body {
+  padding: 7px 15px;
+}

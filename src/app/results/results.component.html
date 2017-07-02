@@ -1,5 +1,5 @@
 <ng-container *ngIf="response?.triples?.length">
-  <div class="panel panel-success">
+  <div class="panel panel-default result-header">
     <div class="panel-body">
       <h4><strong>Resource format:</strong>
     {{ response.resourceFormat }}
@@ -9,3 +9,4 @@
   </div>
   <tr-triple *ngFor="let triple of response.triples" [triple]="triple"></tr-triple>
 </ng-container>
+
