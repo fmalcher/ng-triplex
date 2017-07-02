@@ -7,13 +7,9 @@ import { Triple } from '../shared/models/triple';
   templateUrl: './triple.component.html',
   styleUrls: ['./triple.component.css']
 })
-export class TripleComponent implements OnInit {
+export class TripleComponent {
 
   @Input() triple: Triple;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() queryUrl: string;
 
 }

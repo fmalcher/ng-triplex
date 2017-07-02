@@ -6,5 +6,5 @@
 
   <tr-loading-indicator *ngIf="loading">Extracting triples</tr-loading-indicator>
 
-  <tr-results *ngFor="let response of queryResponses" [response]="response" [hidden]="loading"></tr-results>
+  <tr-results *ngFor="let response of queryResponses" [response]="response" [hidden]="loading" [queryUrl]="searchFormValue"></tr-results>
 </div>

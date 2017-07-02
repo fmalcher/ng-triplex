@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-md-4">
-    <tr-triple-part-box [triplePart]="triple.subject" partType="subject"></tr-triple-part-box>
+    <tr-triple-part-box [triplePart]="triple.subject" partType="subject" [queryUrl]="queryUrl"></tr-triple-part-box>
   </div>
   <div class="col-md-4">
-    <tr-triple-part-box [triplePart]="triple.predicate" partType="predicate"></tr-triple-part-box>
+    <tr-triple-part-box [triplePart]="triple.predicate" partType="predicate" [queryUrl]="queryUrl"></tr-triple-part-box>
   </div>
   <div class="col-md-4">
-    <tr-triple-part-box [triplePart]="triple.object" partType="object"></tr-triple-part-box>
+    <tr-triple-part-box [triplePart]="triple.object" partType="object" [queryUrl]="queryUrl"></tr-triple-part-box>
   </div>
 </div>

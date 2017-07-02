@@ -12,6 +12,7 @@ export class TriplePartBoxComponent {
 
   @Input() triplePart: TriplePart;
   @Input() partType: string;
+  @Input() queryUrl: string;
 
   get cssClasses() {
     switch (this.partType) {
@@ -23,6 +24,11 @@ export class TriplePartBoxComponent {
   }
 
   constructor(private ts: TripleService) { }
+
+  ngOnInit() {
+    console.log(this.queryUrl);
+    console.log(this.triplePart.uri);
+  }
 
   lookupUrl(url: string) {
     this.ts.lookupUrl(url);

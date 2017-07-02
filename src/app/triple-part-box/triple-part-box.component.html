@@ -1,7 +1,7 @@
 <div class="panel" [ngClass]="cssClasses">
   <div class="panel-body">
     {{ triplePart.name }}
-    <span class="pull-right" *ngIf="triplePart.uri">
+    <span class="pull-right" *ngIf="triplePart.uri && triplePart.uri != queryUrl">
       <button class="btn btn-primary btn-xs" (click)="lookupUrl(triplePart.uri)" title="Lookup {{ triplePart.uri }}">
         <span class="glyphicon glyphicon-share"></span>
         Lookup

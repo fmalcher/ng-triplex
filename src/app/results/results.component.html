@@ -7,6 +7,8 @@
     </div>
 
   </div>
-  <tr-triple *ngFor="let triple of response.triples" [triple]="triple"></tr-triple>
+  <tr-triple *ngFor="let triple of response.triples" [triple]="triple" [queryUrl]="queryUrl"></tr-triple>
 </ng-container>
+
+{{ queryUrl }}
 
