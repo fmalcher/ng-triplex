@@ -25,11 +25,6 @@ export class TriplePartBoxComponent {
 
   constructor(private ts: TripleService) { }
 
-  ngOnInit() {
-    console.log(this.queryUrl);
-    console.log(this.triplePart.uri);
-  }
-
   lookupUrl(url: string) {
     this.ts.lookupUrl(url);
   }
